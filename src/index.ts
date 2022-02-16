@@ -45,4 +45,4 @@ app.get("/api", (req: express.Request, res: express.Response) => {
   //res.json({ message: "Successfully verified account" });
 //});
 
-app.listen(process.env.PORT);
+app.listen(process.env.$PORT);
