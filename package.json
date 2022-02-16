@@ -4,9 +4,9 @@
   "main": "index.ts",
   "license": "MIT",
   "scripts": {
-    "start": "npx ts-node src/index.ts",
+    "start": "ts-node-dev src/index.ts",
     "test": "jest ",
-    "build": "tsc --build"
+    "build": "npm i -g ts-node-dev src/index.ts"
   },
   "dependencies": {
     "cors": "^2.8.5",
