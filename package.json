@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node dist/index.js",
     "test": "jest ",
-    "postinstall": "tsc"
+    "postinstall": "tsc && mv -i -v client_build dist/ && rm -v -rf src"
     
   },
   "dependencies": {
