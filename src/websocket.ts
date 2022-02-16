@@ -7,7 +7,7 @@ import { v4 as uuidv4 } from "uuid";
 dotenv.config();
 
 export default class WebSocketService {
-  private webSocketsServerPort = (process.env.PORT ||process.env.WS_PORT);
+  private webSocketsServerPort = process.env.WS_PORT;
   private clients: Map<string, any>;
   private wsServer: any;
 
