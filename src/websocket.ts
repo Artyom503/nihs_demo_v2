@@ -3,7 +3,7 @@ const webSocketServer = require("websocket").server;
 const https = require("https");
 const http = require("http");
 const fs = require("fs");
-import { v4 as uuidv4 } from "uuid";
+const { v4 : uuidv4 } = require ("uuid");
 dotenv.config();
 
 export default class WebSocketService {
