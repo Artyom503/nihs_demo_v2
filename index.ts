@@ -15,9 +15,9 @@ app.use(express.json());
 app.use(cors());
 
 if (process.env.NODE_ENV === "production") {
-    app.use(express.static(path.resolve(__dirname, '../client_build')));
+    app.use(express.static(path.resolve(__dirname, "client_build")));
     app.get('/*', function (req, res) {
-   res.send(path.resolve(__dirname, '../client_build'));
+   res.send(path.resolve(__dirname, "client_build"));
  });
     }
 
