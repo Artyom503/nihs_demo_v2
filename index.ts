@@ -9,12 +9,12 @@ const app = express();
 const webSocket = new WebSocketService();
 
 // Have Node serve the files for our built React app
-app.use(express.static(path.resolve(__dirname, '../client_build')));
+
 
 app.use(express.json());
 app.use(cors());
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static("build"));
+  app.use(express.static(path.resolve(__dirname, '../client_build')));
   app.get("*", (req, res) => {
     res.sendFile(path.resolve('../client_build/index.html'));
   });
