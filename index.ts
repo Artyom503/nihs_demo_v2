@@ -17,7 +17,7 @@ app.use(cors());
 if (process.env.NODE_ENV === "production") {
       app.use(express.static(path.resolve(__dirname, '../client_build')));
       
-      });
+      
     }
 
  //Fake route to send cliams to the client
