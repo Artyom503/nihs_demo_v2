@@ -15,10 +15,8 @@ app.use(express.json());
 app.use(cors());
 
 if (process.env.NODE_ENV === "production") {
-      app.use(express.static("client_build"));
-      app.get("*", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "client_build", "index.html"));
-  });
+      app.use('/static', express.static(path.join(__dirname, 'client_build')));
+     
       
     }
 
