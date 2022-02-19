@@ -13,7 +13,12 @@ app.use(express.static(path.resolve(__dirname, '../client_build')));
 
 app.use(express.json());
 app.use(cors());
-
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("build"));
+  app.get("*", (req, res) => {
+    res.sendFile(path.resolve('../client_build', "index.html"));
+  });
+}
 
  //Fake route to send cliams to the client
 app.get("/api", (req: express.Request, res: express.Response) => {
