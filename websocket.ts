@@ -9,7 +9,7 @@ require('dotenv').config();
 
 
 export default class WebSocketService {
-  private webSocketsServerPort = (process.env.PORT ||process.env.WS_PORT);
+  private webSocketsServerPort = (process.env.PORT2 ||process.env.WS_PORT);
   private clients: Map<string, any>;
   private wsServer: any;
 
