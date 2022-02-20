@@ -4,10 +4,12 @@ const https = require("https");
 const http = require("http");
 const fs = require("fs");
 const { v4 : uuidv4 } = require ("uuid");
-dotenv.config();
+
+require('dotenv').config();
+dotenv.config({ path: './config.env' })
 
 export default class WebSocketService {
-  private webSocketsServerPort = process.env.WS_PORT;
+  private webSocketsServerPort = (process.env.PORT ||process.env.WS_PORT);
   private clients: Map<string, any>;
   private wsServer: any;
 
