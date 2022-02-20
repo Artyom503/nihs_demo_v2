@@ -6,7 +6,7 @@ const fs = require("fs");
 const { v4 : uuidv4 } = require ("uuid");
 
 require('dotenv').config();
-dotenv.config({ path: './config.env' })
+
 
 export default class WebSocketService {
   private webSocketsServerPort = (process.env.PORT ||process.env.WS_PORT);
